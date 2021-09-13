@@ -23,5 +23,10 @@ pipeline {
                 bat "mvn package -f jenkins_pipeline"
             }
         }
+        stage ('helm build'){
+            steps {
+                bat "helm version"
+            }
+        }
     }
 }
