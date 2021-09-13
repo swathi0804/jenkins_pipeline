@@ -26,7 +26,7 @@ pipeline {
         stage ('helm build'){
             steps {
                 // bat "helm repo update"
-                bat "helm install test jenkins_pipeline/sample"
+                bat "helm install test -f jenkins_pipeline/sample"
             }
         }
     }
