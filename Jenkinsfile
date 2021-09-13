@@ -25,6 +25,7 @@ pipeline {
         }
         stage ('helm build'){
             steps {
+                bat "helm repo update"
                 bat "helm install test jenkins_pipeline/sample --values values.yaml"
             }
         }
